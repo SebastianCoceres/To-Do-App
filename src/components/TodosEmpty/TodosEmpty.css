@@ -1,0 +1,17 @@
+.TodoEmpty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TodoEmpty img {
+    max-width: 10em;
+    max-height: 10em;
+    object-fit: contain;
+}
+
+.TodoEmpty p{
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0 1em;
+}

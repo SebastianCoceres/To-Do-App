@@ -1,0 +1,38 @@
+.addTodoItem {
+    --size: 4em;
+    width: var(--size);
+    height: var(--size);
+    background: #10121b;
+    color: #fff;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+
+
+    position: fixed;
+    bottom: 2em;
+    right: 50%;
+    transform: translateX(50%);
+
+    cursor: pointer;
+}
+
+.addTodoItem span {
+    font-size: 3em;
+}
+
+.addTodoItem:hover,
+.addTodoItem:focus {
+    background: #475077;
+    border: 3px solid #000;
+}
+
+.addTodoItem:active {
+    background-color: #323377;
+}
+
+@media(min-width: 992px){
+    .addTodoItem{
+        right: 2em;
+        transform: unset;
+    }
+}

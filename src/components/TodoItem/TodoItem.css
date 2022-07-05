@@ -1,0 +1,133 @@
+.todoItem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(30, 30, 30, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(30, 30, 30, 0.18);
+    width: 100%;
+    color: #fff;
+    padding: 1em;
+    padding-left: 3em;
+    margin-bottom: .5em;
+    border-radius: 5px;
+    text-transform: lowercase;
+}
+
+.todoItem__text {
+    height: 100%;
+    padding: 1em;
+    flex: 1;
+    padding-left: 0;
+}
+
+.todoItem__text::first-letter{
+    text-transform: uppercase;
+}
+
+
+/*Checked with animation*/
+.todoItem__check {
+    position: absolute;
+    left: .5em;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.checkmark {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 10% auto;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    border: 1px solid #ddd;
+}
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+}
+
+.checked .checkmark {
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checked .checkmark__circle {
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checked .checkmark__check {
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: none
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1)
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #7ac142
+    }
+}
+
+.checked p {
+    text-decoration: line-through;
+}
+
+/*Checked with animation*/
+
+.deleteTask {
+    --size: 2em;
+    width: var(--size);
+    height: auto;
+    padding: 2px;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.deleteTask:hover img {
+    filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+}
+
+.deleteTask img {
+    object-fit: contain;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+.todoItem:hover .deleteTask {
+    opacity: 1;
+}

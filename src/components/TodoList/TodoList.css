@@ -1,0 +1,9 @@
+.todoList-container{
+    padding: 1em;
+}
+
+@media(min-width: 992px){
+    .todoList-container{
+        padding: 1em 6em;
+    }
+}

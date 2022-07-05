@@ -1,0 +1,42 @@
+.searchBox {
+    padding: 1em;
+    position: relative;
+
+}
+
+.searchBox__input {
+    padding: 1em;
+    padding-right: 3em;
+    width: 100%;
+
+    background-color: rgba(16 18 27 / 40%);
+    border: 1px solid rgba(113 119 144 / 25%);
+    border-radius: 8px;
+
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.searchBox__input::placeholder {
+    color: #ddd;
+}
+
+
+.searchBox__icon img {
+    width: 100%;
+}
+
+.searchBox__icon {
+    position: absolute;
+    right: 2em;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2em;
+    background-color: unset;
+    border: unset;
+    cursor: pointer;
+}
+
+.searchBox__icon:hover {
+    filter: drop-shadow(1px 1px 2px #fff);
+}

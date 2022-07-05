@@ -1,0 +1,14 @@
+.TodoError{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #e81b16;
+    font-weight: bold;
+}
+
+.TodoError img {
+    max-width: 10em;
+    max-height: 10em;
+    object-fit: contain;
+}

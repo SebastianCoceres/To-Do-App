@@ -24,7 +24,7 @@
     padding-left: 0;
 }
 
-.todoItem__text::first-letter{
+.todoItem__text::first-letter {
     text-transform: uppercase;
 }
 
@@ -115,7 +115,7 @@
     display: grid;
     place-content: center;
     cursor: pointer;
-    opacity: 0;
+
 }
 
 .deleteTask:hover img {
@@ -130,4 +130,10 @@
 
 .todoItem:hover .deleteTask {
     opacity: 1;
+}
+
+@media(min-width: 768px) {
+    .deleteTask {
+        opacity: 0;
+    }
 }

@@ -1,10 +1,13 @@
 .TodoCounter {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .TodoCounter>div {
     width: 100%;
+    height: 100%;
 }
 
 .TodoCounter>div:nth-child(2) {
@@ -71,14 +74,17 @@
 }
 
 @media(min-width: 768px) {
+
     .TodoCounter>div {
         width: 50%;
+        height: 100%;
         margin: 0;
     }
 
     .TodoCounter>div {
-        display: grid;
-        place-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .TodoCounter>div:nth-child(2) {
@@ -87,7 +93,10 @@
 
     .TodoCounter__image img {
         width: 100%;
+        height: 100%;
         display: block;
+        object-fit: contain;
+        max-height: 50vh;
     }
 
     .TodoCounter__text {

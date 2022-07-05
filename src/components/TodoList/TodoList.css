@@ -1,5 +1,6 @@
 .todoList-container{
     padding: 1em;
+    padding-bottom: 10em !important;
 }
 
 @media(min-width: 992px){

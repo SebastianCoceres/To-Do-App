@@ -1,6 +1,7 @@
 .modalTodoForm {
     width: 90%;
     max-width: 320px;
+    min-height: 300px;
     height: 30vh;
     display: flex;
     flex-direction: column;

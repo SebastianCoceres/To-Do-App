@@ -13,11 +13,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   max-width: 1170px;
   overflow-x: hidden;
+  overflow-y: scroll;
   background-image: url("./assets/cool-background.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  height: 100vh;
+}
+
+body::-webkit-scrollbar{
+  width: .5em;
 }
 
 code {
